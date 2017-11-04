@@ -1,0 +1,25 @@
+{
+  "name": "rocketleague",
+  "version": "1.0.0",
+  "description": "An API wrapper for Rocket League.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jake-Ruston/rocketleague.git"
+  },
+  "keywords": [
+    "rocketleague"
+  ],
+  "author": "Jake Ruston <rjake@hotmail.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jake-Ruston/rocketleague/issues"
+  },
+  "homepage": "https://github.com/Jake-Ruston/rocketleague#readme",
+  "dependencies": {
+    "node-fetch": "^1.7.3"
+  }
+}

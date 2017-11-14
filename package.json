@@ -1,6 +1,6 @@
 {
   "name": "rocketleague",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An API wrapper for Rocket League.",
   "main": "index.js",
   "scripts": {

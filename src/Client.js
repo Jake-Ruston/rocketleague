@@ -11,60 +11,46 @@ class Client {
     };
   }
 
-  getPlatforms() {
-    return new Promise(resolve => {
-      fetch(`${this.base}/data/platforms`, this.options)
-        .then(res => res.json())
-        .then(data => resolve(data));
-    });
+  async getPlatforms() {
+    const response = await fetch(`${this.base}/data/platforms`, this.options);
+    const data = await response.json();
+    return data;
   }
 
-  getSeasons() {
-    return new Promise(resolve => {
-      fetch(`${this.base}/data/seasons`, this.options)
-        .then(res => res.json())
-        .then(data => resolve(data));
-    });
+  async getSeasons() {
+    const response = await fetch(`${this.base}/data/seasons`, this.options);
+    const data = await response.json();
+    return data;
   }
 
-  getPlaylists() {
-    return new Promise(resolve => {
-      fetch(`${this.base}/data/playlists`, this.options)
-        .then(res => res.json())
-        .then(data => resolve(data));
-    });
+  async getPlaylists() {
+    const response = await fetch(`${this.base}/data/playlists`, this.options);
+    const data = await response.json();
+    return data;
   }
 
-  getTiers() {
-    return new Promise(resolve => {
-      fetch(`${this.base}/data/tiers`, this.options)
-        .then(res => res.json())
-        .then(data => resolve(data));
-    });
+  async getTiers() {
+    const response = await fetch(`${this.base}/data/tiers`, this.options);
+    const data = await response.json();
+    return data;
   }
 
-  getPlayer(username, platform) {
-    return new Promise(resolve => {
-      fetch(`${this.base}/player?unique_id=${encodeURIComponent(username)}&platform_id=${platforms[platform]}`, this.options)
-        .then(res => res.json())
-        .then(data => resolve(data));
-    });
+  async getPlayer(username, platform) {
+    const response = await fetch(`${this.base}/player?unique_id=${encodeURIComponent(username)}&platform_id=${platforms[platform]}`, this.options);
+    const data = await response.json();
+    return data;
   }
 
-  search(username) {
-    return new Promise(resolve => {
-      fetch(`${this.base}/search/players?display_name=${encodeURIComponent(username)}`, this.options)
-        .then(res => res.json())
-        .then(data => resolve(data));
-    });
+  async search(username) {
+    const response = await fetch(`${this.base}/search/players?display_name=${encodeURIComponent(username)}`, this.options);
+    const data = await response.json();
+    return data;
   }
 
-  getLeaderboard(thing, type = null) {
-    return new Promise(resolve => {
-      fetch(`${this.base}/leaderboard/${type === null ? 'ranked?playlist_id=' + playlists[thing] : 'stat?type=' + type}`, this.options)
-        .then(res => res.json())
-        .then(data => resolve(data));
-    });
+  async getLeaderboard(thing, type = null) {
+    const response = await fetch(`${this.base}/leaderboard/${type === null ? 'ranked?playlist_id=' + playlists[thing] : 'stat?type=' + type}`, this.options);
+    const data = await response.json();
+    return data;
   }
 }
 
